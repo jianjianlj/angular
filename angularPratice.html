@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular模块化学习</title>
+</head>
+<body>
+    <div ng-app="app">
+        <div ng-controller="demoController">
+            <h1>{{name}}在{{school}}努力发一篇SCI</h1>
+        </div>
+    </div>
+
+
+    <script src="libs/angular.min.js"></script>
+    <script>
+        //需求：angular模块化练习
+        var app = angular.module('app',[]);
+        app.controller('demoController',['$scope',function($scope){
+            $scope.name = '孙一平';
+            $scope.school = '上海理工大学';
+
+
+        }]);
+    </script>
+</body>
+</html>
